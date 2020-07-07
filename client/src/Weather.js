@@ -13,7 +13,7 @@ const Weather = (props) => {
         <h2>{data.name}</h2>
         <img src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`} alt="Weather Icon"/>
         <span>{data.weather[0].main}</span>&nbsp;
-        <span>{Math.floor(data.main.temp)}&deg;F</span>
+        <span>{Math.floor(data.main.temp)}&deg;C</span>
         <Table>
           <tbody>
             <tr>
@@ -30,11 +30,11 @@ const Weather = (props) => {
             </tr>
             <tr>
               <td>Min Temp</td>
-              <td>{Math.floor(data.main.temp_min)}&deg;F</td>
+              <td>{Math.floor(data.main.temp_min)}&deg;C</td>
             </tr>
             <tr>
               <td>Max Temp</td>
-              <td>{Math.floor(data.main.temp_max)}&deg;F</td>
+              <td>{Math.floor(data.main.temp_max)}&deg;C</td>
             </tr>
           </tbody>
         </Table>
